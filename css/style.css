@@ -372,11 +372,14 @@ p {
 /*Why-block*/
 .why {
 	padding-top: 75px;
+	margin-bottom: 105px;
 	background-color: red;
 	height: 680px;
 	display: flex;
 	justify-content: center;
-	background: url('../img/bg_why.png');
+	background: url('../img/bg_why.png') no-repeat transparent;
+	background-size: cover;
+	position: relative;
 }
 .why-pic {
 	margin-left: 30px;
@@ -391,6 +394,7 @@ p {
 .why-text h2 {
 	margin-left: 0;
 	color: #ffffff;
+	margin-bottom: 65px;
 }
 
 .why-text h2:after {
@@ -410,17 +414,75 @@ p {
 }
 
 .reason {
+	padding-bottom: 35px;
 	display: flex;
 	flex-wrap: wrap;
 }
 
 .reason img {
-	padding: ;
 	width: 69px;
+	height: 69px;
 }
 
+.reason h3 {
+	padding-left: 25px;
+	font-size: 17px;
+	line-height: 21px;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
 
+.reason p {
+	width: 465px;
+	padding-left: 94px;
+	font-size: 15px;
+	line-height: 25px;
+	font-weight: 300;
+}
 
+.why-atom {
+	display: block;
+	position: absolute;
+	-z-index: 1;
+	right: 35px;
+	bottom: -165px;
+}
+
+/*Differences block*/
+
+.differences {
+	margin-bottom: 205px;
+	display: flex;
+	flex-direction: column;
+}
+
+.differences h2 {
+	margin: 0;
+	margin-bottom: 60px;
+	margin-right: 830px;
+	align-self: center;
+	width: auto;
+}
+
+.differences h2:after {
+	top: 73%;
+	left: 33%;
+	width: 68%;
+}
+
+.diffs {
+	display: flex;
+	justify-content: center;
+}
+
+.diff {
+	display: flex;
+	align-items: center;
+}
+
+.diffs p {
+	width: 300px;
+}
 
 
 
@@ -480,6 +542,53 @@ p {
 	.part-atom {
 		display: none;
 	}
+	.why {
+		margin-bottom: 75px;
+		flex-direction: column;
+		align-items: center;
+		height: 1242px;
+	}
+	.why-text {
+		margin-bottom: 50px;
+	}
+	.why-pic {
+		margin-left: 0;
+	}
+	.reason {
+		margin-bottom: 50px;
+	}
+	.why-atom {
+		display: none;
+	}
+	
+	.differences {
+		margin-bottom: 135px;
+		align-items: center;
+	}
+
+	.differences h2 {
+		margin: 0 auto;
+		margin-bottom: 50px;
+	}
+
+	.diffs {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.diff {
+		margin-bottom: 30px;
+		flex-direction: column;
+	}
+	.diff img {
+		margin-bottom: 15px;
+	}
+
+	.diff p {
+		padding: 0;
+		text-align: center;
+	}
+
 }
 
 @media screen and (max-width: 749px)  {
@@ -603,6 +712,112 @@ p {
 	}
 	.part img {
 		margin-top: 30px;
+	}
+	.why {
+		margin-bottom: 40px;
+		align-items: center;
+		height: 950px;
+	}
+	.why-text {
+		width: 320px;
+		margin-bottom: 35px;
+		padding-left: 15px;
+		justify-content: center;
+		align-items: flex-start;
+	}
+
+	.why-pic img{
+		width: 290px;
+		height: 280px;
+	}
+	.why-text h2 {
+		margin: 0;
+		display: flex;
+		width: 170px;
+		color: #ffffff;
+		margin-bottom: 35px;
+		font-size: 21px;
+		line-height: 27px;
+		letter-spacing: 1px;
+		text-align: left;
+}
+		
+
+	.why-text h2:after {
+		display: block;
+		position: absolute;
+		z-index: -1;
+		top: 45%;
+		left: -2%;
+		width: 102%;
+		content: '';
+		border-bottom: 10px solid #1ed4be;
+	}
+	.reason {
+		width: 290px;
+		padding-bottom: 20px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.reason img {
+		width: 54px;
+		height: 54px;
+	}
+
+	.reason h3 {
+		width: 225px;
+		padding-left: 10px;
+		font-size: 15px;
+		line-height: 19px;
+		font-weight: 700;
+	}
+
+	.reason p {
+		width: 290px;
+		padding-left: 65px;
+		font-size: 13px;
+		line-height: 17px;
+		font-weight: 300;
+	}
+
+	.differences {
+		margin-bottom: 75px;
+		align-items: center;
+	}
+
+	.differences h2 {
+		width: 220px;
+		margin: 0 auto;
+		margin-bottom: 50px;
+	}
+
+	.differences h2:after {
+		top: 32%;
+		left: -2%;
+		width: 102%;
+	}
+
+	.diffs {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.diff {
+		margin-bottom: 30px;
+		flex-direction: column;
+	}
+	.diff img {
+		width: 97px;
+		margin-bottom: 15px;
+	}
+
+	.diff p {
+		width: 220px;
+		padding: 0;
+		text-align: center;
+		font-size: 13px;
+		line-height: 17px;
 	}
 
 }
