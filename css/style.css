@@ -485,6 +485,7 @@ p {
 }
 
 .how {
+	position: relative;
 	margin-bottom: 100px;
 	display: flex;
 	flex-direction: column;
@@ -540,6 +541,10 @@ p {
 	line-height: 38px;
 	color: #ffffff;
 }
+.how .part-atom {
+	top: 95%;
+	left: 75%;
+}
 
 .steps {
 	margin-bottom: 35px;
@@ -547,7 +552,6 @@ p {
 	height: 910px;
 	display: flex;
 	flex-direction: column;
-	align-content: space-between;
 	flex-wrap: wrap;
 	background: 
 		url('../img/how_pics.png') 0 185px no-repeat,
@@ -587,11 +591,54 @@ p {
 	height: 400px;
 }
 
-
-.step_special {
+.reviews {
+	height: 1180px;
+	background: url('../img/bg_reviews.png') no-repeat transparent;
+	background-size: cover;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.reviews h2 {
+	margin: 100px 350px 40px 0;
+	width: 440px;
+	text-align: left;
+	color: #ffffff;
+}
+.reviews p {
+	padding: 0;
+	margin: 0 350px 220px 0;
+	width: 440px;
+	text-align: left;
+	color: #ffffff;
+}
+.reviews h2:after {
+	top: 35%;
+	left: 0%;
+	width: 53%;
+}
+.reviews .reviews-group {
+	position: absolute;
+	bottom: 0%;
+	right: 18%;
 }
 
+.slider-btns {
+	display: flex;
+}
 
+.slider-btn {
+	margin-left: 18px;
+	display: flex;
+	width: 11px;
+	height: 11px;
+	border-radius: 5px;
+	background-color: #0051b5;
+}
+.slider-btn:hover {
+	background-color: #ffffff;
+}
 
 
 
@@ -624,7 +671,7 @@ p {
 		display: flex;
 	}
 	.trigger img {
-	padding-left: 0px;
+		padding-left: 0px;
 	}
 
 	.desc {
@@ -694,6 +741,76 @@ p {
 		padding: 0;
 		text-align: center;
 	}
+
+	.how {
+	margin-bottom: 100px;
+	}
+
+	.how h2 {
+		margin-bottom: 50px;
+	}
+
+
+	.how h3 {
+		margin: 0;
+		margin-bottom: 5px;
+		margin-left: 30px;
+		color: #000000;
+
+	}
+
+	.how p {
+		margin-left: 85px;
+		width: 260px;
+		font-size: 15px;
+		line-height: 21px;
+		padding: 0;
+	}
+	.how .part-atom {
+		display: none;
+	}
+
+	.steps {
+		margin-bottom: 20px;
+		width: 750px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		background: 
+			url('../img/how_pics2.png') 30px 185px no-repeat,
+			url('../img/how_line.png') 375px 0 no-repeat;
+	}
+
+	.step {
+		width: 350px;
+	}
+
+	.step1 {
+		order: 1;
+		height: 280px;
+	}
+	.step3 {
+
+		order: 2;
+		height: 430px;
+	}
+	.step5 {
+		order: 3;
+		height: 190px;
+	}
+
+	.step2 {
+		margin-left: 5px;
+		padding-top: 60px;
+		order: 4;
+		height: 430px;
+	}
+	.step4 {
+		margin-left: 5px;
+		order: 5;
+		height: 400px;
+	}
+
 
 }
 
@@ -925,5 +1042,88 @@ p {
 		font-size: 13px;
 		line-height: 17px;
 	}
+	
+	.how {
+		margin-bottom: 45px;
+	}
+	.how h2 {
+		width: 290px;
+		margin-bottom: 30px;
+	}
+	.how h2:after {
+		top: 30%;
+		left: 21%;
+		width: 58%;
+	}
 
+	.how h3 {
+		margin-left: 20px;
+		font-size: 15px;
+		line-height: 21px;
+	}
+
+	.how p {
+		margin-left: 70px;
+		width: 220px;
+		font-size: 13px;
+		line-height: 17px;
+	}
+	.how .button {
+		width: 290px;
+		font-size: 11px;
+
+	}
+	.how .step .button {
+		justify-content: left;
+		padding-left: 5px;
+		width: 286px;
+		height: 38px;
+	}
+	.how span {
+		margin-left: ;
+		margin-right: 20px;
+		width: 30px;
+		height: 30px;
+		border-radius: 15px;
+		font-size: 14px;
+		line-height: 30px;
+	}
+
+	.steps {
+		height: auto;
+		margin-bottom: 20px;
+		width: 320px;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		background-image: none;
+	}
+
+	.step {
+		height: auto;
+		margin-bottom: 30px;
+	}
+
+	.step1 {
+		padding: 0;
+		order: 1;
+	}
+	.step3 {
+		padding: 0;
+		order: 3;
+	}
+	.step5 {
+		margin-bottom: 0px;
+		order: 5;
+	}
+
+	.step2 {
+		margin-left: 0;
+		padding: 0;
+		order: 2;
+	}
+	.step4 {
+		margin-left: 0;
+		padding: 0;
+		order: 4;
+	}
 }
