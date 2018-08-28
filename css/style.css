@@ -484,6 +484,112 @@ p {
 	width: 300px;
 }
 
+.how {
+	margin-bottom: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.how h2:after {
+	top: 65%;
+	left: 2%;
+	width: 53%;
+}
+
+.how h2 {
+	margin-bottom: 140px;
+}
+
+.how h3 {
+	margin: 0;
+	margin-bottom: 5px;
+	margin-left: 50px;
+	color: #000000;
+
+}
+
+.how p {
+	margin-left: 105px;
+	width: 260px;
+	font-size: 15px;
+	line-height: 21px;
+	padding: 0;
+	
+}
+
+.how .button {
+	width: 367px;
+	height: 47px;
+	border-radius: 23px;
+}
+
+.how .step .button {
+	width: 327px;
+}
+
+.how span {
+	text-align: center;
+	margin-right: 15px ;
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	background-color: #0f2775;
+	border-radius: 19px;
+	font-size: 17px;
+	line-height: 38px;
+	color: #ffffff;
+}
+
+.steps {
+	margin-bottom: 35px;
+	width: 910px;
+	height: 910px;
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+	flex-wrap: wrap;
+	background: 
+		url('../img/how_pics.png') 0 185px no-repeat,
+		url('../img/how_line.png') 455px 0 no-repeat,
+		url('../img/how_miniline.png') 520px 295px no-repeat,
+		url('../img/how_miniline.png') 520px 720px no-repeat,
+		url('../img/how_miniline.png') 360px 510px no-repeat;
+}
+
+.step {
+	width: 455px;
+}
+
+.step1 {
+	order: 1;
+	height: 280px;
+}
+.step3 {
+
+	order: 2;
+	height: 430px;
+}
+.step5 {
+	order: 3;
+	height: 190px;
+}
+
+.step2 {
+	margin-left: 105px;
+	padding-top: 70px;
+	order: 4;
+	height: 430px;
+}
+.step4 {
+	margin-left: 105px;
+	order: 5;
+	height: 400px;
+}
+
+
+.step_special {
+}
 
 
 
