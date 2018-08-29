@@ -637,17 +637,6 @@ p {
 	display: flex;
 }
 
-.slider-btn {
-	margin-left: 18px;
-	display: flex;
-	width: 11px;
-	height: 11px;
-	border-radius: 5px;
-	background-color: #0051b5;
-}
-.slider-btn:hover {
-	background-color: #ffffff;
-}
 .btns750 {
 	display: none;
 }
@@ -655,6 +644,9 @@ p {
 
 .slider-left{
 	width: 475px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 } 
 .slider-right{
 	min-width: 600px;
