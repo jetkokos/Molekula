@@ -748,9 +748,10 @@ p {
 	font-size: 13px;
 	line-height: 32px;
 }
-.footer a:hover {
+.about1 a:hover, .about2 a:hover {
 	background-color: #1ed4be; 
 }
+
 .footer p {
 	padding-left: 0;
 	margin-bottom: 40px;
@@ -771,7 +772,7 @@ p {
 
 }
 .footer .enter:after {
-	top: 67%;
+	top: 49%;
 	width: 40px;
 }
 .footer .button {
