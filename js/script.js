@@ -1,4 +1,18 @@
+$(document).ready(function(){
+  $('.slider-right').slick({
+  dots: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  appendDots: $('.slider-btns'),
+  variableWidth: true
+  });
+});
+
+
 /*Плавное появление Popup*/
+/*
 function showPopup() {
 	document.querySelector(".popup").classList.add('visible');
 };
@@ -14,9 +28,9 @@ function showPopupSuccess() {
 function hidePopupSuccess() {
 	document.querySelector(".popup-success").classList.remove('visible');
 };
-
+*/
 /*Плавный переход к якорям*/
-
+/*
 var linkNav = document.querySelectorAll('[href^="#nav"]'),
     V = 0.5;  // скорость, может иметь дробное значение через точку
 for (var i = 0; i < linkNav.length; i++) {
@@ -40,3 +54,4 @@ for (var i = 0; i < linkNav.length; i++) {
     }
   }, false);
 }
+*/
