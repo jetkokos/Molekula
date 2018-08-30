@@ -20,7 +20,7 @@
 					<a href="#" class="nav-itm" onclick="event.preventDefault(); showCallBackPopup()">Обратная связь</a>
 					<div class="nav-add">
 						<a href="#" class="enter" onclick="event.preventDefault(); showEnterPopup()">Вход</a>
-						<a href="tel:+253751412456" class="tube"></a>
+						<a href="#" class="tube" onclick="event.preventDefault(); showCallBackPopup()"></a>
 					</div>
 				</nav>
 			</div>
@@ -244,10 +244,10 @@
 			<div class="popup-container">
 				<button href="#" id="close" onclick="hideCallBackPopup()">&times;</button>
 				<h6>Заказать обратный звонок</h6>
-				<form action="send.php" method="post" class="form">
-					<input type="text" name="name" placeholder="Ваше имя" required>
-					<input type="tel" name="tel" placeholder="+7 (___) ___-__-__" required>
-					<button type="submit" class="button button-gradient" onclick="event.preventDefault(); showPopupSuccessCall(); hideCallBackPopup()">Заказать обратный звонок</button>
+				<form class="form">
+					<input type="text" name="name" placeholder="Ваше имя">
+					<input type="tel" name="tel" placeholder="+7 (___) ___-__-__">
+					<button class="button button-gradient">Заказать обратный звонок</button>
 				</form>	
 				<p class="popup_little_text">Менеджер свяжется с вами в ближайшее время</p>	
 			</div>

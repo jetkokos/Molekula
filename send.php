@@ -1,61 +1,45 @@
-<?php
-/*
-$name = $_POST['name'];
-$tel = $_POST['tel'];
+<?php 
+	use PHPMailer\PHPMailer\PHPMailer;
 
-$name = htmlspecialchars($name);
-$tel = htmlspecialchars($tel);
+	require 'PHPMailer.php';
+	require 'SMTP.php';
+	// Переменные
+	$name = $_POST['name'];
+	$number = $_POST['tel'];
+	// Настройки
+	$mail = new PHPMailer;
+	try {
+    //Server settings
+    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = 'smtp.yandex.ru';  					  // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username = 'arkonaallods';                 // SMTP username
+    $mail->Password = 'Irjkf491';                           // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 465;                                    // TCP port to connect to
 
-$name = trim($name);
-$tel = trim($tel);
+    //Recipients
+    $mail->setFrom('arkonaallods@yandex.ru');		  //My e-mail
+    $mail->addAddress('afeniks@bk.ru');    			 // Add a recipient
+    //$mail->addAddress('ellen@example.com');               // Name is optional
+    //$mail->addReplyTo('info@example.com', 'Information');
+    //$mail->addCC('cc@example.com');
+    //$mail->addBCC('bcc@example.com');
 
-echo $name;
-echo $tel;
+    //Attachments
+    //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+    //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
-if (mail("afeniks@bk.ru", "Запрос с сайта Молекула", "Имя:".$name.". Телефон: ".$tel ,"From: info@fornex.ru \r\n"))
- { 
-    echo "сообщение успешно отправлено"; 
-} else { 
-    echo "при отправке сообщения возникли ошибки"; 
+    //Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = 'Заявка с Молекулы';
+    $mail->Body    = 'Имя $name . Телефон $number';
+    //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+    $mail->send();
+    echo 'Message has been sent';
+} catch (Exception $e) {
+    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }
-*/
-if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
-$otvet_serv = json_encode(
-array( 
-'text' => 'Возникла ошибка при отправке данных'
-));
-die($otvet_serv);
-};
-
-if(!isset($_POST["user_name"]) || !isset($_POST["user_tel"]))
-{
-$otvet_serv = json_encode(array('type'=>'error', 'text' => 'Заполните форму'));
-die($otvet_serv);
-}
-$user_Name = filter_var($_POST["user_name"], FILTER_SANITIZE_STRING);
-$user_Phone = filter_var($_POST["user_tel"], FILTER_SANITIZE_STRING);
-
-if(strlen($user_Name)<3)
-{
-$otvet_serv = json_encode(array('text' => 'Поле Имя слишком короткое или пустое'));
-die($otvet_serv);
-}
-if(!is_numeric($user_Phone))
-{
-$otvet_serv = json_encode(array('text' => 'Номер телефона может состоять только из цифр'));
-die($otvet_serv);
-}
-
-$to_Email = "afeniks@bk.ru"; 
-$subject = 'Запрос обратного звонка '.$_POST["user_name"]; 
-$message = "Имя: ".$user_Name.". Телефон: ".$user_Phone;
-if(!mail($to_Email, $subject, $message, "From: test@a40961.hostru03.fornex.org \r\n"))
-{
-$otvet_serv = json_encode(array('text' => 'Не могу отправить почту! Пожалуйста, проверьте ваши настройки PHP почты.'));
-die($otvet_serv);
-}else{
-$otvet_serv = json_encode(array('text' => 'Спасибо! '.$user_Name .', ваше сообщение отправлено.'));
-die($otvet_serv);
-}
-
-?>
+?>	

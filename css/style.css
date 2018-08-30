@@ -142,7 +142,7 @@ h6 {
 }
 
 .enter {
-	padding: 0 40px;
+	margin: 0 40px;
 	font-size: 15px;
 	line-height: 15px;
 	z-index: 0;
@@ -165,6 +165,10 @@ h6 {
 	width: 41px;
 	content: '';
 	border-bottom: 4px solid #1ed4be;
+}
+
+.enter:hover:after {
+	border: none;
 }
 
 .tube {
@@ -790,6 +794,7 @@ p {
 	margin-bottom: 40px;
 }
 .footer .enter {
+	margin: 0;
 	width: 40px;
 	padding: 0;
 	justify-content: flex-start;
@@ -1133,7 +1138,7 @@ p {
 	}
 }
 
-@media screen and (max-width: 1365px)  {
+@media screen and (max-width: 1080px)  {
 	.nav-itm {
 		display: none;
 	}
