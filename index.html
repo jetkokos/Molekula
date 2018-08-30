@@ -10,20 +10,19 @@
 </head>
 <body>
 	<div class="main-container">
-		<div class="first-screen">
+		<div id="navfirst" class="first-screen">
 			<div class="header">
 				<a href="#" class="logo"><img src="img/logo.png"></a>
 				<nav class="nav">
-					<a href="#" class="nav-itm">О молекуле</a> 
-					<a href="#" class="nav-itm">Отзывы</a>
-					<a href="#" class="nav-itm">Контакты</a>
-					<a href="#" class="nav-itm">Обратная связь</a>
+					<a href="#navdesc" class="nav-itm">О молекуле</a> 
+					<a href="#navreviews" class="nav-itm">Отзывы</a>
+					<a href="#" class="nav-itm" onclick="event.preventDefault(); showCallBackPopup()">Контакты</a>
+					<a href="#" class="nav-itm" onclick="event.preventDefault(); showCallBackPopup()">Обратная связь</a>
 					<div class="nav-add">
-						<a href="#" class="enter">Вход</a>
-						<a href="#" class="tube"></a>
+						<a href="#" class="enter" onclick="event.preventDefault(); showEnterPopup()">Вход</a>
+						<a href="tel:+253751412456" class="tube"></a>
 					</div>
 				</nav>
-				
 			</div>
 			<div class="main">
 				<div class="main-text white">
@@ -31,7 +30,7 @@
 					<p>Нет денег на закупку?</p>
 					<p>Возьмите, что нужно, прямо сейчас в обмен на вашу продукцию.</p>
 					<p>Без банковских кредитов, поручителей и нервотрёпки.</p>
-					<a href="#" class="button button_green">Взять товарный кредит</a>
+					<a href="#" class="button button_green" onclick="event.preventDefault(); showTakeCreditPopup()">Взять товарный кредит</a>
 				</div>
 				<div class="triggers white">
 					<div class="trigger">
@@ -50,12 +49,12 @@
 			</div>
 		</div>
 	
-		<div class="desc">
+		<div id="navdesc" class="desc">
 			<div class="desc-text">
 				<p>Молекула – это безденежная система обмена товаром. Вы получаете необходимые товары, сырьё или материалы участников системы в обмен на вашу продукцию сопоставимую по стоимости.</p>
 				<p>При этом получить нужный товар можно сразу, а расплатиться за него по мере возникновения спроса на вашу продукцию.</p>
 				<p>Весь выставленный товар гарантированно есть в наличии и готов к отправке в любой город РФ. Искать поставщиков удобно с помощью умного мгновенного поиска по базе актуальных предложений. Сотрудники Молекулы проверяют каждого контрагента и берут финансовые гарантии на предоставляемые товары.</p>
-				<a class="button button_green button_little" href="#">Скачать полные условия работы</a>
+				<a href="#" class="button button_green button_little" onclick="event.preventDefault(); showDownloadCondPopup()">Скачать полные условия работы</a>
 			</div>
 			<div class="desc-pic"><img src="img/desc-molekula.png" alt=""></div>
 		</div>
@@ -124,7 +123,7 @@
 			<h2>Как работает молекула</h2>
 			<div class="steps">
 				<div class="step step1">
-					<a href="#" class="button button_green"> <span class="number">1</span>Создайте заявку на закупку</a>
+					<a href="#" class="button button_green" onclick="event.preventDefault(); showTakeCreditPopup()"> <span class="number">1</span>Создайте заявку на закупку</a>
 				</div>
 				<div class="step step2">
 					<h3><span class="number">2</span>Подбор предложений</h3>
@@ -143,11 +142,11 @@
 					<p class="">Клиенты выкупают ваш товар по мере необходимости, придерживаясь аналогичной схемы работы</p>
 				</div>	
 			</div>
-			<a href="#" class="button button_green">Скачать коммерческое предложение</a>
+			<a href="#" class="button button_green" onclick="event.preventDefault(); showDownloadOfferPopup()">Скачать коммерческое предложение</a>
 			<img class="part-atom" src="img/part_atom.png" alt="part_atom">
 		</div>
 
-		<div class="reviews">
+		<div id="navreviews" class="reviews">
 			<div class="reviews-wrapper">
 				<h2>Что говорят участники молекулы</h2>
 				<div class="slider-block">
@@ -209,10 +208,10 @@
 			<div class="app-wrapper">
 				<img class="app_plane" src="img/application_plane.png" alt="">
 				<p>Зарегистрируйтесь и возьмите безденежный товарный кредит на сумму до 100 миллионов рублей за один день.</p>
-				<a href="#" class="button button_blue">Оставить заявку по акции</a>				
+				<a href="#" class="button button_blue" onclick="event.preventDefault(); showTakeCreditPopup()">Оставить заявку по акции</a>				
 			</div>
 		</div>
-		<div class="footer">
+		<div id="navfooter" class="footer">
 			<div class="footer-wrapper">
 				<div class="col adress">
 					<a href="#" class="logo"><img src="img/logo.png"></a>
@@ -220,35 +219,148 @@
 					<p>molecula© 2018</p>
 				</div>
 				<div class="col about1">
-					<a href="#">О молекуле</a>
-					<a href="#">Отзывы</a>
-					<a href="#">Контакты</a>
-					<a href="#">Условия работы</a>
-					<a href="#">Коммерческое предложение</a>
+					<a href="#navdesc">О молекуле</a>
+					<a href="#reviews">Отзывы</a>
+					<a href="#" onclick="event.preventDefault(); showCallBackPopup()">Контакты</a>
+					<a href="#" onclick="event.preventDefault(); showDownloadCondPopup()">Условия работы</a>
+					<a href="#" onclick="event.preventDefault(); showDownloadOfferPopup()">Коммерческое предложение</a>
 				</div>
 				<div class="col about2">
-					<a href="">Договор оферты</a>
-					<a href="">Политика конфиденциальности</a>
-					<a href="" class="enter">Войти</a>
+					<a href="#" onclick="event.preventDefault(); showDownloadContractPopup()">Договор оферты</a>
+					<a href="#" onclick="event.preventDefault(); showDownloadPoliticsPopup()">Политика конфиденциальности</a>
+					<a href="#" class="enter" onclick="event.preventDefault(); showEnterPopup()">Войти</a>
 				</div>
 				<div class="col phone">
-					<a href="#" class="">+ 25 (375) 141-24-56</a>
+					<a href="tel:+253751412456" class="">+ 25 (375) 141-24-56</a>
 					<p>Горячая линия: 24/7</p>
-					<a href="#" class="button button_blue">Связаться с нами</a>
+					<a href="#" class="button button_blue" onclick="event.preventDefault(); showCallBackPopup()">Связаться с нами</a>
 				</div>
+				<a href="#navfirst" class="go_top"></a>		
 			</div>
-			<a href="#" class="go_top"></a>			
 		</div>
+<!--popups-->
+		<div class="popup callBack">
+			<div class="overlay"></div>
+			<div class="popup-container">
+				<button href="#" id="close" onclick="hideCallBackPopup()">&times;</button>
+				<h6>Заказать обратный звонок</h6>
+				<form action="send.php" method="post" class="form">
+					<input type="text" name="name" placeholder="Ваше имя" required>
+					<input type="tel" name="tel" placeholder="+7 (___) ___-__-__" required>
+					<button type="submit" class="button button-gradient" onclick="event.preventDefault(); showPopupSuccessCall(); hideCallBackPopup()">Заказать обратный звонок</button>
+				</form>	
+				<p class="popup_little_text">Менеджер свяжется с вами в ближайшее время</p>	
+			</div>
+		</div>
+		<div class="popup takeCredit">
+			<div class="overlay"></div>
+			<div class="popup-container">
+				<button href="#" id="close" onclick="hideTakeCreditPopup()">&times;</button>
+				<h6>Взять товарный кредит</h6>
+				<form action="#" class="form">
+					<input type="text" placeholder="Ваше имя" required>
+					<input type="e-mail" placeholder="e-mail" required>
+					<input type="tel" placeholder="+7 (___) ___-__-__" required>
+					<input type="text" placeholder="Необходимый товар" required>
+					<input type="text" placeholder="Количество" required>
+					<input class="comment" type="text" placeholder="Комментарий">
+					<button type="submit" class="button button-gradient" onclick="event.preventDefault(); showPopupSuccessCall(); hideDownloadTakeCreditPopup()">Отправить запрос</button>
+				</form>	
+				<p class="popup_little_text"> Менеджер свяжется с вами в ближайшее время</p>	
+			</div>
+		</div>
+		<div class="popup downloadCond">
+			<div class="overlay"></div>
+			<div class="popup-container">
+				<button href="#" id="close" onclick="hideDownloadCondPopup()">&times;</button>
+				<h6>Скачать условия работы</h6>
+				<form action="#" class="form">
+					<input type="text" placeholder="Ваше имя" required>
+					<input type="e-mail" placeholder="e-mail" required>
+					<button type="submit" class="button button-gradient" onclick="event.preventDefault(); showPopupSuccessDocs(); hideDownloadCondPopup()">Получить условия работы</button>
+				</form>	
+				<p class="popup_little_text">Мы отправим вам необходимые документы на указанный адрес электронной почты.</p>	
+			</div>
+		</div>
+		<div class="popup downloadOffer">
+			<div class="overlay"></div>
+			<div class="popup-container">
+				<button href="#" id="close" onclick="hideDownloadOfferPopup()">&times;</button>
+				<h6>Скачать коммерческое предложение</h6>
+				<form action="#" class="form">
+					<input type="text" placeholder="Ваше имя" required>
+					<input type="e-mail" placeholder="e-mail" required>
+					<button type="submit" class="button button-gradient" onclick="event.preventDefault(); showPopupSuccessDocs(); hideDownloadOfferPopup()">Получить документ</button>
+				</form>	
+				<p class="popup_little_text">Мы отправим вам необходимые документы на указанный адрес электронной почты.</p>	
+			</div>
+		</div>	
+		<div class="popup downloadContract">
+			<div class="overlay"></div>
+			<div class="popup-container">
+				<button href="#" id="close" onclick="hideDownloadContractPopup()">&times;</button>
+				<h6>Скачать договор оферты</h6>
+				<form action="#" class="form">
+					<input type="text" placeholder="Ваше имя" required>
+					<input type="e-mail" placeholder="e-mail" required>
+					<button type="submit" class="button button-gradient" onclick="event.preventDefault(); showPopupSuccessDocs(); hideDownloadContractPopup()">Получить договор оферты</button>
+				</form>	
+				<p class="popup_little_text">Мы отправим вам необходимые документы на указанный адрес электронной почты.</p>	
+			</div>
+		</div>
+		<div class="popup downloadPolitics">
+			<div class="overlay"></div>
+			<div class="popup-container">
+				<button href="#" id="close" onclick="hideDownloadPoliticsPopup()">&times;</button>
+				<h6>Скачать политику конфиденциальности</h6>
+				<form action="#" class="form">
+					<input type="text" placeholder="Ваше имя" required>
+					<input type="e-mail" placeholder="e-mail" required>
+					<button type="submit" class="button button-gradient" onclick="event.preventDefault(); showPopupSuccessDocs(); hideDownloadPoliticsPopup()">Получить документ</button>
+				</form>	
+				<p class="popup_little_text">Мы отправим вам необходимые документы на указанный адрес электронной почты.</p>	
+			</div>
+		</div>	
+		<div class="popup enterPop">
+			<div class="overlay"></div>
+			<div class="popup-container">
+				<button href="#" id="close" onclick="hideEnterPopup()">&times;</button>
+				<h6>Вход</h6>
+				<form action="#" class="form">
+					<input type="e-mail" placeholder="E-mail" required>
+					<input type="password" placeholder="ПАРОЛЬ" required>
+					<button type="submit" class="button button-gradient" onclick="event.preventDefault();">Войти в систему</button>
+					<p class="popup_little_text"></p>	
+				</form>	
+			</div>
+		</div>
+		<div class="popup popupSuccessCall">
+			<div class="overlay"></div>
+			<div class="popup-container">
+				<button href="#" id="close" onclick="hidePopupSuccessCall()">&times;</button>
+				<p class="popup_little_text">Ваша заявка успешно отправлена.<br>Дождитесь звонка оператора.</p>	
+			</div>
+		</div>	
+		<div class="popup popupSuccessDocs">
+			<div class="overlay"></div>
+			<div class="popup-container">
+				<button href="#" id="close" onclick="hidePopupSuccessDocs()">&times;</button>
+				<p class="popup_little_text">Ваша заявка успешно отправлена.<br>Мы отправим документы на указанный<br>Вами электронный адрес в течении 1 часа.</p>
+			</div>	
+		</div>	
+
 	</div>
 
 <!--			
 	
 	<script src="js/SmoothScroll.js"></script>
 	<script src="js/wow.js"></script>
+		
 -->
 
 	<script src="js/jquery-3.3.1.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/script.js"></script>
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
 </html>

@@ -12,25 +12,81 @@ $(document).ready(function(){
 
 
 /*Плавное появление Popup*/
-/*
-function showPopup() {
-	document.querySelector(".popup").classList.add('visible');
+
+function showCallBackPopup() {
+	document.querySelector(".callBack").classList.add('visible');
 };
 
-function hidePopup() {
-	document.querySelector(".popup").classList.remove('visible');
+function hideCallBackPopup() {
+	document.querySelector(".callBack").classList.remove('visible');
 };
 
-function showPopupSuccess() {
-	document.querySelector(".popup-success").classList.add('visible');
+function showTakeCreditPopup() {
+  document.querySelector(".takeCredit").classList.add('visible');
 };
 
-function hidePopupSuccess() {
-	document.querySelector(".popup-success").classList.remove('visible');
+function hideTakeCreditPopup() {
+  document.querySelector(".takeCredit").classList.remove('visible');
 };
-*/
+
+function showDownloadCondPopup() {
+  document.querySelector(".downloadCond").classList.add('visible');
+};
+
+function hideDownloadCondPopup() {
+  document.querySelector(".downloadCond").classList.remove('visible');
+};
+
+function showDownloadOfferPopup() {
+  document.querySelector(".downloadOffer").classList.add('visible');
+};
+
+function hideDownloadOfferPopup() {
+  document.querySelector(".downloadOffer").classList.remove('visible');
+};
+
+function showDownloadContractPopup() {
+  document.querySelector(".downloadContract").classList.add('visible');
+};
+
+function hideDownloadContractPopup() {
+  document.querySelector(".downloadContract").classList.remove('visible');
+};
+
+function showDownloadPoliticsPopup() {
+  document.querySelector(".downloadPolitics").classList.add('visible');
+};
+
+function hideDownloadPoliticsPopup() {
+  document.querySelector(".downloadPolitics").classList.remove('visible');
+};
+function showEnterPopup() {
+  document.querySelector(".enterPop").classList.add('visible');
+};
+
+function hideEnterPopup() {
+  document.querySelector(".enterPop").classList.remove('visible');
+};
+
+function showPopupSuccessCall() {
+  document.querySelector(".popupSuccessCall").classList.add('visible');
+};
+
+function hidePopupSuccessCall() {
+  document.querySelector(".popupSuccessCall").classList.remove('visible');
+};
+
+function showPopupSuccessDocs() {
+  document.querySelector(".popupSuccessDocs").classList.add('visible');
+};
+
+function hidePopupSuccessDocs() {
+  document.querySelector(".popupSuccessDocs").classList.remove('visible');
+};
+
+
 /*Плавный переход к якорям*/
-/*
+
 var linkNav = document.querySelectorAll('[href^="#nav"]'),
     V = 0.5;  // скорость, может иметь дробное значение через точку
 for (var i = 0; i < linkNav.length; i++) {
@@ -54,4 +110,24 @@ for (var i = 0; i < linkNav.length; i++) {
     }
   }, false);
 }
-*/
+
+/*Отправка формы*/
+var name = $('input[name=name]').val(); 
+var tel = $('input[name=tel]').val();
+var otpravka = true;
+if(name==""){ 
+  otpravka = false;
+}
+if(tel ==""){
+  otpravka = false;
+}
+
+dannie = {'user_name':name, 'user_tel':tel};
+
+if(otpravka) 
+{
+$.post('send.php', dannie, function(otvet){ 
+rezultat = '<div>'+otvet.text+'</div>';
+$("#form_result").hide().html(rezultat).slideDown();
+}, 'json');
+}
