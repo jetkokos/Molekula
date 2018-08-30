@@ -323,7 +323,7 @@ p {
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	margin-bottom: 190px;
+	padding-bottom: 190px;
 
 }
 .part-line {
@@ -365,7 +365,7 @@ p {
 	width: 289px;
 	position: absolute;
 	top: 350px;
-	left: 60px;
+	right: 1550px;
 	z-index: -1;
 }
 
@@ -444,9 +444,9 @@ p {
 .why-atom {
 	display: block;
 	position: absolute;
-	-z-index: 1;
-	right: 35px;
-	bottom: -165px;
+	z-index: 1;
+	left: 1580px;
+	bottom: -185px;
 }
 
 /*Differences block*/
@@ -460,7 +460,7 @@ p {
 .differences h2 {
 	margin: 0;
 	margin-bottom: 60px;
-	margin-right: 830px;
+	margin-right: 750px;
 	align-self: center;
 	width: auto;
 }
@@ -479,10 +479,13 @@ p {
 .diff {
 	display: flex;
 	align-items: center;
+	margin-right: 70px;
 }
 
 .diffs p {
-	width: 300px;
+	width: 220px;
+	font-size: 15px;
+	line-height: 23px;
 }
 
 .how {
@@ -528,10 +531,13 @@ p {
 
 .how .step .button {
 	width: 327px;
+	justify-content: left;
+	margin-left: 50px;
 }
 
 .how span {
 	text-align: center;
+	margin-left: 5px;
 	margin-right: 15px ;
 	display: inline-block;
 	width: 38px;
@@ -902,9 +908,30 @@ p {
 	background-image: radial-gradient(circle at center, #5febf1 0%, #3966d2 64%, #173b89 100%);
 }
 
+.go_top {
+	display: block;
+	position: absolute;
+	bottom: 150px;
+	right: 250px;
+	width: 88px;
+	height: 88px;
+	border-radius: 37px;
+	background: url('../img/go_top.png') no-repeat transparent;
+}
+
+@media screen and (max-width: 1919px)  {
+	.differences h2 {
+		margin-right: 750px;
+	}
+}
+@media screen and (max-width: 1600px)  {
+	.reviews-wrapper {
+		width: 1330px;
+	}	
+}
 
 
-@media screen and (max-width: 1530px)  {
+@media screen and (max-width: 1365px)  {
 	.nav-itm {
 		display: none;
 	}
@@ -922,7 +949,12 @@ p {
 		font-size: 17px;
 		line-height: 25px;
 	}
-
+	.header {
+		max-width: 750px;
+	}
+	.main {
+		max-width: 750px;
+	}
 	.triggers {
 		flex-direction: column;
 		margin-top: 55px;
@@ -1166,7 +1198,9 @@ p {
 	.quantity p:last-child {
 		margin-top:  0px;
 	}
-
+	.go_top {
+		display: none;
+	}
 
 }
 
@@ -1199,6 +1233,10 @@ p {
 		font-size: 21px;
 		line-height: 27px;
 		letter-spacing: 1px;
+	}
+	h2:after {
+		top:83%;
+		border-bottom: 5px solid #1ed4be;
 	}
 
 	h1:after {
@@ -1326,11 +1364,11 @@ p {
 		display: block;
 		position: absolute;
 		z-index: -1;
-		top: 45%;
+		top: 42%;
 		left: -2%;
 		width: 102%;
 		content: '';
-		border-bottom: 10px solid #1ed4be;
+		border-bottom: 5px solid #1ed4be;
 	}
 	.reason {
 		width: 290px;
@@ -1372,9 +1410,10 @@ p {
 	}
 
 	.differences h2:after {
-		top: 32%;
-		left: -2%;
-		width: 102%;
+		top: 33%;
+		left: 1%;
+		width: 98%;
+		border-bottom: 5px solid #1ed4be;
 	}
 
 	.diffs {
@@ -1410,6 +1449,7 @@ p {
 		top: 30%;
 		left: 21%;
 		width: 58%;
+		border-bottom: 5px solid #1ed4be;
 	}
 
 	.how h3 {
@@ -1492,6 +1532,7 @@ p {
 	.join-wrapper h2:after {
 		top: 30%;
 		width: 68%;
+		border-bottom: 5px solid #1ed4be;
 	}
 	.join-wrapper p {
 		font-size: 13px;
@@ -1536,6 +1577,7 @@ p {
 	.footer .enter:after {
 		top: 85%;
 		left: 43.4%;
+		border-bottom: 5px solid #1ed4be;
 	}
 	.col {
 		width: 320px;
