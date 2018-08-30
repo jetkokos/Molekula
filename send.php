@@ -15,13 +15,13 @@
     $mail->Host = 'smtp.yandex.ru';  					  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'arkonaallods';                 // SMTP username
-    $mail->Password = 'Irjkf491';                           // SMTP password
+    $mail->Password = '111111';                           // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('arkonaallods@yandex.ru');		  //My e-mail
-    $mail->addAddress('afeniks@bk.ru');    			 // Add a recipient
+    $mail->setFrom('arkonaallod@yandex.ru');		  //My e-mail
+    $mail->addAddress('afenik@bk.ru');    			 // Add a recipient
     //$mail->addAddress('ellen@example.com');               // Name is optional
     //$mail->addReplyTo('info@example.com', 'Information');
     //$mail->addCC('cc@example.com');
