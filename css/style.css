@@ -931,9 +931,11 @@ p {
 	background: url('../img/go_top.png') no-repeat transparent;
 }
 /*Popup styles*/
+
 .callBack {
 	visibility: hidden;
 }
+
 .takeCredit {
 	visibility: hidden;
 }
@@ -1079,6 +1081,7 @@ p {
 	width: 24px;
 	height: 24px;
 	color: #033787;
+	z-index: 10;
 }
 
 #close:hover {
@@ -1113,6 +1116,7 @@ p {
 	opacity: 1;
 	visibility: visible;
 }
+
 
 
 
@@ -1416,6 +1420,9 @@ p {
 	.first-screen {
 		background-position: 40%;
 	}
+	.logo {
+		padding-left: 15px;
+	}
 	.logo img{
 		width: 130px;
 	}
@@ -1424,6 +1431,7 @@ p {
 		padding-right: 15px;
 	}
 	.enter {
+		margin: 0 20px;
 		padding: 8px;
 	}
 	h1 {
@@ -1523,6 +1531,7 @@ p {
 	.participants {
 		margin-top: 60px;
 		margin-bottom: 50px;
+		padding-bottom: 0;
 	}
 	.part-line {
 		display: none;
@@ -1632,6 +1641,7 @@ p {
 	.diff {
 		margin-bottom: 30px;
 		flex-direction: column;
+		margin-right: 0;
 	}
 	.diff img {
 		width: 97px;
@@ -1680,6 +1690,7 @@ p {
 	.how .step .button {
 		justify-content: left;
 		padding-left: 5px;
+		margin-left: 15px;
 		width: 286px;
 		height: 38px;
 	}
@@ -1827,6 +1838,8 @@ p {
 	}
 	.review {
 		max-width: 300px;
+		margin-right: 12vw;
+
 	}
 	.review p {
 		margin-left: 15px;
@@ -1886,9 +1899,10 @@ p {
 	.popupSuccessDocs .popup_little_text {
 	margin-top: 20px;
 	}
-.popupSuccessCall .popup_little_text {
+	.popupSuccessCall .popup_little_text {
 	margin-top: 20px;
 	}
+
 
 }
 	
