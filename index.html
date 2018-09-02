@@ -239,20 +239,17 @@
 			</div>
 		</div>
 <!--popups-->
-
-
-
-
-
 		<div class="popup callBack">
 			<div class="overlay"></div>
 			<div class="popup-container">
 				<button href="#" id="close">&times;</button>
 				<h6>Заказать обратный звонок</h6>
-				<form method="POST" class="form">
+				<form class="form formCall">
 					<input type="text" name="name" placeholder="Ваше имя">
+					<span class="form_warning"></span>
 					<input type="tel" name="tel" placeholder="+7 (___) ___-__-__">
-					<button type="submit" class="button button-gradient">Заказать обратный звонок</button>
+					<span class="form_warning"></span>
+					<button name="submit" class="button button-gradient">Заказать обратный звонок</button>
 				</form>	
 				<p class="popup_little_text">Менеджер свяжется с вами в ближайшее время</p>	
 			</div>
@@ -262,14 +259,20 @@
 			<div class="popup-container">
 				<button href="#" id="close">&times;</button>
 				<h6>Взять товарный кредит</h6>
-				<form action="#" class="form">
-					<input type="text" placeholder="Ваше имя" required>
-					<input type="e-mail" placeholder="e-mail" required>
-					<input type="tel" placeholder="+7 (___) ___-__-__" required>
-					<input type="text" placeholder="Необходимый товар" required>
-					<input type="text" placeholder="Количество" required>
-					<input class="comment" type="text" placeholder="Комментарий">
-					<button type="submit" class="button button-gradient" onclick="event.preventDefault(); showPopupSuccessCall(); hideDownloadTakeCreditPopup()">Отправить запрос</button>
+				<form class="form formCall">
+					<input type="text" name="name" placeholder="Ваше имя">
+					<span class="form_warning"></span>
+					<input type="e-mail" name="e_mail" placeholder="e-mail">
+					<span class="form_warning"></span>
+					<input type="tel" name="tel" placeholder="+7 (___) ___-__-__">
+					<span class="form_warning"></span>
+					<input type="text" name="good_name" placeholder="Необходимый товар">
+					<span class="form_warning"></span>
+					<input type="text" name="good_quantity" placeholder="Количество">
+					<span class="form_warning"></span>
+					<input class="comment" name="comment" type="text" placeholder="Комментарий">
+					<span class="form_warning"></span>
+					<button name="submit" class="button button-gradient">Отправить запрос</button>
 				</form>	
 				<p class="popup_little_text"> Менеджер свяжется с вами в ближайшее время</p>	
 			</div>
@@ -279,10 +282,12 @@
 			<div class="popup-container">
 				<button href="#" id="close">&times;</button>
 				<h6>Скачать условия работы</h6>
-				<form action="#" class="form">
-					<input type="text" placeholder="Ваше имя" required>
-					<input type="e-mail" placeholder="e-mail" required>
-					<button type="submit" class="button button-gradient" onclick="event.preventDefault(); showPopupSuccessDocs(); hideDownloadCondPopup()">Получить условия работы</button>
+				<form class="form formDocs">
+					<input type="text" name="name" placeholder="Ваше имя">
+					<span class="form_warning"></span>
+					<input type="e-mail" name="e_mail" placeholder="e-mail">
+					<span class="form_warning"></span>
+					<button  class="button button-gradient">Получить условия работы</button>
 				</form>	
 				<p class="popup_little_text">Мы отправим вам необходимые документы на указанный адрес электронной почты.</p>	
 			</div>
@@ -292,10 +297,12 @@
 			<div class="popup-container">
 				<button href="#" id="close">&times;</button>
 				<h6>Скачать коммерческое предложение</h6>
-				<form action="#" class="form">
-					<input type="text" placeholder="Ваше имя" required>
-					<input type="e-mail" placeholder="e-mail" required>
-					<button type="submit" class="button button-gradient" onclick="event.preventDefault(); showPopupSuccessDocs(); hideDownloadOfferPopup()">Получить документ</button>
+				<form class="form formDocs">
+					<input type="text" name="name" placeholder="Ваше имя">
+					<span class="form_warning"></span>
+					<input type="e-mail" name="e_mail" placeholder="e-mail">
+					<span class="form_warning"></span>
+					<button name="submit" class="button button-gradient">Получить документ</button>
 				</form>	
 				<p class="popup_little_text">Мы отправим вам необходимые документы на указанный адрес электронной почты.</p>	
 			</div>
@@ -305,10 +312,12 @@
 			<div class="popup-container">
 				<button href="#" id="close">&times;</button>
 				<h6>Скачать договор оферты</h6>
-				<form action="#" class="form">
-					<input type="text" placeholder="Ваше имя" required>
-					<input type="e-mail" placeholder="e-mail" required>
-					<button type="submit" class="button button-gradient" onclick="event.preventDefault(); showPopupSuccessDocs(); hideDownloadContractPopup()">Получить договор оферты</button>
+				<form class="form formDocs">
+					<input type="text" name="name" placeholder="Ваше имя">
+					<span class="form_warning"></span>
+					<input type="e-mail" name="e_mail" placeholder="e-mail">
+					<span class="form_warning"></span>
+					<button name="submit" class="button button-gradient">Получить договор оферты</button>
 				</form>	
 				<p class="popup_little_text">Мы отправим вам необходимые документы на указанный адрес электронной почты.</p>	
 			</div>
@@ -318,10 +327,12 @@
 			<div class="popup-container">
 				<button href="#" id="close">&times;</button>
 				<h6>Скачать политику конфиденциальности</h6>
-				<form action="#" class="form">
-					<input type="text" placeholder="Ваше имя" required>
-					<input type="e-mail" placeholder="e-mail" required>
-					<button type="submit" class="button button-gradient" onclick="event.preventDefault(); showPopupSuccessDocs(); hideDownloadPoliticsPopup()">Получить документ</button>
+				<form class="form formDocs">
+					<input type="text" name="name" placeholder="Ваше имя">
+					<span class="form_warning"></span>
+					<input type="e-mail" name="e_mail" placeholder="e-mail">
+					<span class="form_warning"></span>
+					<button name="submit" class="button button-gradient" >Получить документ</button>
 				</form>	
 				<p class="popup_little_text">Мы отправим вам необходимые документы на указанный адрес электронной почты.</p>	
 			</div>
@@ -331,10 +342,12 @@
 			<div class="popup-container">
 				<button href="#" id="close">&times;</button>
 				<h6>Вход</h6>
-				<form action="#" class="form">
-					<input type="e-mail" placeholder="E-mail" required>
-					<input type="password" placeholder="ПАРОЛЬ" required>
-					<button type="submit" class="button button-gradient" onclick="event.preventDefault();">Войти в систему</button>
+				<form class="form formEnter">
+					<input type="e-mail" name="e_mail" placeholder="E-mail">
+					<span class="form_warning"></span>
+					<input type="password" name="password" placeholder="ПАРОЛЬ">
+					<span class="form_warning"></span>
+					<button name="submit" class="button button-gradient">Войти в систему</button>
 					<p class="popup_little_text"></p>	
 				</form>	
 			</div>
@@ -355,17 +368,13 @@
 		</div>	
 
 	</div>
-
 <!--			
-	
-	<script src="js/SmoothScroll.js"></script>
+		<script src="js/SmoothScroll.js"></script>
 	<script src="js/wow.js"></script>
-		
+	
 -->
-
 	<script src="js/jquery-3.3.1.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/script.js"></script>
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-
 </html>

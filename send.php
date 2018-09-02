@@ -9,7 +9,11 @@
     
 	// Переменные
 	$name = $_POST['name'];
-	$number = $_POST['tel'];
+    $tel = $_POST['tel'];
+    $e_mail = $_POST['e_mail'];
+    $good_name = $_POST['good_name'];
+    $good_quantity = $_POST['good_quantity'];
+    $comment = $_POST['comment'];
 	// Настройки
 	$mail = new PHPMailer;
 	try {
@@ -39,14 +43,15 @@
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Заявка с Молекулы';
-
-    $body = '<p>Имя $name . Телефон $number</p>';
-    $mail->Body    = $body;
-    $mail->AltBody = strip_tags($body);
+    $mail->Body = "Имя: $name <br> Телефон: $tel <br> E-mail: $e_mail <br> Название товара: $good_name <br> Количество товара: $good_quantity <br> Комментарий: $comment";
+    $mail->AltBody = "Имя: $name \r\n Телефон: $tel \r\n E-mail: $e_mail \r\n Название товара: $good_name \r\n Количество товара: $good_quantity \r\n Комментарий: $comment";
+    
 
     $mail->send();
     echo 'Message has been sent';
+    $answer = '1';
 } catch (Exception $e) {
+    $answer = '0';
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }
 ?>	

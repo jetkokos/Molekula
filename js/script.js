@@ -61,24 +61,80 @@ $(document).ready(function(){
   });
 
 //Отправка данных на почту
-  $(".form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "send.php", 
-      contentType: '',
-      processData: false,
-      data: th.serialize()
-    }).done(function() {
-        $('.visible').toggleClass('visible');
-        $('.popupSuccessCall').addClass('visible');
-      setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-      }, 300);
+
+  $('.formCall').submit(function(event) {
+    var errors = false;
+    $(this).find('span').empty();
+
+    $(this).find('input').each(function() {
+      if ($.trim( $(this).val() ) == '') {
+        errors = true;
+        $(this).css('border', '1px solid rgb(231,22,54)');
+        $(this).next().text('обязательно для заполнения');
+      }
     });
+    if (!errors) {
+      var data = $(this).serialize();
+      $.ajax({
+        url: 'send.php',
+        type: 'POST',
+        data: data,
+        beforeSend: function() {
+        },
+        success: function() {
+            $('.form').find('input').val('');
+            $('.popup').removeClass('visible');
+            $('.popupSuccessCall').addClass('visible');
+        },
+        error: function() {
+          console.log('Ошибка файла обработчика');
+        }
+
+      })
+    }
     return false;
-  });  
+  });
+
+  $('.formDocs').submit(function(event) {
+    var errors = false;
+    $(this).find('span').empty();
+
+    $(this).find('input').each(function() {
+      if ($.trim( $(this).val() ) == '') {
+        errors = true;
+        $(this).css('border', '1px solid rgb(231,22,54)');
+        $(this).next().text('обязательно для заполнения');
+      }
+    });
+    if (!errors) {
+      var data = $(this).serialize();
+      $.ajax({
+        url: 'send.php',
+        type: 'POST',
+        data: data,
+        beforeSend: function() {
+        },
+        success: function() {
+            $('.form').find('input').val('');
+            $('.popup').removeClass('visible');
+            $('.popupSuccessDocs').addClass('visible');
+        },
+        error: function() {
+          console.log('Ошибка файла обработчика');
+        }
+
+      })
+    }
+    return false;
+  });
+
+
+
+
+
+
+
+
 
 
 
