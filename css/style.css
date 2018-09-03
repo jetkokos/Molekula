@@ -139,7 +139,7 @@ h6 {
 }
 .nav-itm:hover {
 	background-color: #1ed4be; 
-	transform: translateY(-6px);
+	transform: scale(1.2);
 	transition-duration: 0.5s;
 }
 
@@ -162,7 +162,7 @@ h6 {
 
 .enter:hover {
 	background-color: #1ed4be; 
-	transform: translateY(-6px);
+	transform: scale(1.1);
 	transition-duration: 0.5s;
 }
 
@@ -191,7 +191,7 @@ h6 {
 
 .tube:hover {
 	background-image: url('../img/tube_hover.png');
-	transform: translateY(-6px);
+	transform: scale(1.1);
 	transition-duration: 0.5s;
 }
 
@@ -945,6 +945,11 @@ p {
 	border-radius: 37px;
 	background: url('../img/go_top.png') no-repeat transparent;
 }
+
+.go_top:hover {
+	transform: scale(1.1);
+	transition-duration: 0.5s;
+}
 /*Popup styles*/
 
 .callBack {
@@ -1102,6 +1107,8 @@ p {
 #close:hover {
 	cursor: pointer;
 	color: #1dd3bd;
+	transform: scale(1.2);
+	transition-duration: 0.5s;
 }
 .popup_little_text {
 	margin: 0;
