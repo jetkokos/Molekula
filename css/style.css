@@ -753,11 +753,12 @@ p {
 }
 .app-wrapper {
 	width: 1140px;
-	bottom: 340px;
 	height: 342px;
+	margin-bottom: -171px;
 	border-radius: 10px;
 	background: linear-gradient(90deg, #00b1bb 0%, #3be789 100%);
-	position: absolute;
+	z-index: 1;
+	position: relative;
 }
 
 .app_plane {
@@ -989,6 +990,7 @@ p {
 	z-index: 50;
 	opacity: 0;
 	transition: opacity 1s ease 0s;
+	overflow-y: scroll;
 }
 
 .overlay {
@@ -1002,10 +1004,10 @@ p {
 }
 .popup-container {
 	background: #ffffff;
-	position: fixed;
+	position: absolute;
+	top: 10%;
 	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+	transform: translateX(-50%);
 	overflow: hidden;
 	width: 475px;
 	padding: 0px;
@@ -1015,6 +1017,7 @@ p {
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
+
 }
 
 .popup-container h6 {
@@ -1035,6 +1038,7 @@ p {
 	margin: 0;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
 .popup-container input {
@@ -1082,9 +1086,8 @@ p {
 	text-transform: uppercase;
 	outline: none;
 	border: none;
-}
-.popup-container button {
 	cursor: pointer;
+	text-align: center;
 }
 
 #close {
@@ -1107,8 +1110,6 @@ p {
 #close:hover {
 	cursor: pointer;
 	color: #1dd3bd;
-	transform: scale(1.2);
-	transition-duration: 0.5s;
 }
 .popup_little_text {
 	margin: 0;
@@ -1397,7 +1398,6 @@ p {
 	}
 	.app-wrapper {
 	width: 720px;
-	bottom: 470px;
 	}
 	.review {
 		width: 720px;
@@ -1586,9 +1586,6 @@ p {
 	.desc-pic img {
 		width: 290px;
 	}
-	.desc-text a {
-		margin-left: 0px;
-	}
 	.participants {
 		margin-top: 60px;
 		margin-bottom: 50px;
@@ -1624,6 +1621,7 @@ p {
 	.why-pic img{
 		width: 290px;
 		height: 280px;
+		margin-bottom: 30px;
 	}
 	.why-text h2 {
 		margin: 0;
@@ -1824,7 +1822,7 @@ p {
 	.app-wrapper {
 		height: 225px;
 		width: 290px;
-		bottom: 700px;
+		margin-bottom: -125px;
 	}
 	.application p {
 		padding-left: 20px;
