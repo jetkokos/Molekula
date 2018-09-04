@@ -19,6 +19,13 @@ body {
 	box-sizing: border-box;
 	overflow-x: hidden;
 }
+.popup-open {
+	position: fixed;
+	width: 100vw;
+
+	overflow: hidden;
+    touch-action: none;
+}
 h1 {
 	display: block;
 	position: relative;
@@ -558,7 +565,7 @@ p {
 .how .step .button {
 	width: 327px;
 	justify-content: left;
-	margin-left: 50px;
+	margin-left: 35px;
 }
 
 .how span {
@@ -992,7 +999,7 @@ p {
 	z-index: 50;
 	opacity: 0;
 	transition: opacity 1s ease 0s;
-	overflow-y: scroll;
+	overflow: scroll;
 }
 
 .overlay {
@@ -1003,6 +1010,8 @@ p {
 	top: 0;
 	bottom: 0;
 	opacity: 0.5;
+	overflow: hidden;
+	height: 100vh;
 }
 .popup-container {
 	background: #ffffff;
@@ -1019,7 +1028,8 @@ p {
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
-
+	z-index: 300;
+	overflow: scroll;
 }
 
 .popup-container h6 {

@@ -3,6 +3,7 @@ $(document).ready(function(){
     $(document).on("click", '.callBack_ref', function(event) {
       event.preventDefault();
       $('.callBack').addClass('visible');
+      $('body').addClass('popup-open');
     });
 
     $(document).on("click", '.takeCredit_ref', function(event) {
@@ -152,7 +153,6 @@ var show = true;
 			show = false;
 		}
 	});
-
 
 
 
