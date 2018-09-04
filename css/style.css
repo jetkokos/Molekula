@@ -22,7 +22,6 @@ body {
 .popup-open {
 	position: fixed;
 	width: 100vw;
-
 	overflow: hidden;
     touch-action: none;
 }
@@ -990,6 +989,7 @@ p {
 .popupSuccessDocs {
 	visibility: hidden;
 }
+
 .popup {
 	position: fixed;
 	left: 0;
@@ -1011,7 +1011,6 @@ p {
 	bottom: 0;
 	opacity: 0.5;
 	overflow: hidden;
-	height: 100vh;
 }
 .popup-container {
 	background: #ffffff;
@@ -1019,7 +1018,6 @@ p {
 	top: 10%;
 	left: 50%;
 	transform: translateX(-50%);
-	overflow: hidden;
 	width: 475px;
 	padding: 0px;
 	border-radius: 4px;

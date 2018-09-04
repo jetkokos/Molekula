@@ -9,35 +9,42 @@ $(document).ready(function(){
     $(document).on("click", '.takeCredit_ref', function(event) {
       event.preventDefault();
       $('.takeCredit').addClass('visible');
+      $('body').addClass('popup-open');
     });
 
     $(document).on("click", '.downloadCond_ref', function(event) {
       event.preventDefault();
       $('.downloadCond').addClass('visible');
+      $('body').addClass('popup-open');
     });
 
     $(document).on("click", '.downloadOffer_ref', function(event) {
       event.preventDefault();
       $('.downloadOffer').addClass('visible');
+      $('body').addClass('popup-open');
     });
 
     $(document).on("click", '.downloadContract_ref', function(event) {
       event.preventDefault();
       $('.downloadContract').addClass('visible');
+      $('body').addClass('popup-open');
     });
 
     $(document).on("click", '.downloadPolitics_ref', function(event) {
       event.preventDefault();
       $('.downloadPolitics').addClass('visible');
+      $('body').addClass('popup-open');
     });
 
     $(document).on("click", ".enterPop_ref", function(event) {
       event.preventDefault();
       $('.enterPop').addClass('visible');
+      $('body').addClass('popup-open');
     });
 
     $(document).on("click", "#close", function(event) {
       $('.visible').removeClass('visible');
+      $('body').addClass('popup-open');
     });
 
 
