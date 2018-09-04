@@ -1641,9 +1641,9 @@ p {
 		display: block;
 		position: absolute;
 		z-index: -1;
-		top: 42%;
-		left: -2%;
-		width: 102%;
+		top: 67%;
+		left: -0.5%;
+		width: 100%;
 		content: '';
 		border-bottom: 5px solid #1ed4be;
 	}
