@@ -230,6 +230,7 @@ p {
 	color: #ffffff;
 	font-weight: 900;
 	text-transform: uppercase;
+	transition-duration: 0.5s;
 	
 }
 
@@ -274,10 +275,6 @@ p {
 	padding-left: 30px;
 	display: flex;
 	justify-content: space-between;
-}
-
-.trigger {
-
 }
 
 .trigger p {
@@ -410,6 +407,7 @@ p {
 .why-pic {
 	margin-left: 30px;
 }
+
 .why-text {
 	width: 620px;
 	display: flex;
@@ -714,7 +712,7 @@ p {
 }
 
 .join {
-	margin-bottom: 240px;
+	margin-bottom: 60px;
 	display: flex;
 	justify-content: center;
 }
@@ -945,6 +943,7 @@ p {
 	height: 88px;
 	border-radius: 37px;
 	background: url('../img/go_top.png') no-repeat transparent;
+	transition-duration: 0.5s;
 }
 
 .go_top:hover {
@@ -1271,10 +1270,12 @@ p {
 		height: 1242px;
 	}
 	.why-text {
+		margin-top: 60px;
 		margin-bottom: 50px;
 	}
 	.why-pic {
 		margin-left: 0;
+		margin-bottom: 60px;
 	}
 	.reason {
 		margin-bottom: 50px;
@@ -1380,7 +1381,7 @@ p {
 		height: 400px;
 	}
 	.join {
-		margin-bottom: 210px;
+		margin-bottom: 35px;
 	}
 	.join-wrapper {
 		width: 750px;
@@ -1754,7 +1755,6 @@ p {
 		height: 38px;
 	}
 	.how span {
-		margin-left: ;
 		margin-right: 20px;
 		width: 30px;
 		height: 30px;
@@ -1802,7 +1802,7 @@ p {
 	}
 	.join {
 		margin-top: -150px;
-		margin-bottom: 125px;
+		margin-bottom: 25px;
 	}
 	.join-wrapper {
 		width: 320px;
