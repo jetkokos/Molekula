@@ -218,7 +218,6 @@ p {
 
 .button{
 	margin-top: 55px;
-	margin-left: 30px;
 	text-decoration: none;
 	display: flex;
 	justify-content: center;
@@ -232,7 +231,10 @@ p {
 	font-weight: 900;
 	text-transform: uppercase;
 	transition-duration: 0.5s;
-	
+}
+
+.main-text .button {
+	margin-left: 30px;
 }
 
 .button_green {
@@ -1063,7 +1065,7 @@ p {
 	border: 1px solid #e61535;
 }
 
-.popup-container button {
+.popup-container .button {
 	margin-top: 10px;
 	margin-bottom: 20px;
 	margin-left: 0;
@@ -1535,8 +1537,11 @@ p {
 		line-height: 26px;
 		width: 290px;
 		height: 49px;
-		margin-left: 15px;
 		margin-top: 30px;
+	}
+
+	.main-text .button {
+		margin-left: 15px;
 	}
 
 	.triggers {
@@ -1945,17 +1950,19 @@ p {
 	.popup-container input {
 		width: 280px;
 	}
-	.popup-container button {
+	.popup-container .button {
 		width: 290px;
 		padding-left: 16px;
 		padding-right: 16px;
+		display: inline;
 	}
 	.popup_little_text {
 		margin-bottom: 20px;
 		width: 270px;
 	}
 	#close {
-		top: 2%;
+		top: 6%;
+		right: 8%;
 		display: inline-block;
 		text-align: left;
 		line-height: 0;
