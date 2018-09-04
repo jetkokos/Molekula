@@ -44,7 +44,7 @@ $(document).ready(function(){
 
     $(document).on("click", "#close", function(event) {
       $('.visible').removeClass('visible');
-      $('body').addClass('popup-open');
+      $('body').removeClass('popup-open');
     });
 
 
