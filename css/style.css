@@ -1029,7 +1029,6 @@ p {
 	align-items: center;
 	justify-content: flex-start;
 	z-index: 300;
-	overflow: scroll;
 }
 
 .popup-container h6 {
