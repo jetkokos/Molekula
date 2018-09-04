@@ -1961,8 +1961,8 @@ p {
 		width: 270px;
 	}
 	#close {
-		top: 6%;
-		right: 8%;
+		top: 30px;
+		right: 30px;
 		display: inline-block;
 		text-align: left;
 		line-height: 0;
