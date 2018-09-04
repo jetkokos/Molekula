@@ -1100,8 +1100,8 @@ p {
 	background: none;
 	border: none;
 	outline: none;
-	width: 24px;
-	height: 24px;
+	width: 40px;
+	height: 40px;
 	color: #033787;
 	z-index: 10;
 }
@@ -1961,8 +1961,8 @@ p {
 		width: 270px;
 	}
 	#close {
-		top: 30px;
-		right: 30px;
+		top: 10px;
+		right: 10px;
 		display: inline-block;
 		text-align: left;
 		line-height: 0;
