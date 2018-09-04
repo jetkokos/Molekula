@@ -1102,8 +1102,6 @@ p {
 	height: 24px;
 	color: #033787;
 	z-index: 10;
-	border-radius: 0;
-	-webkit-appearance: none;
 }
 
 #close:hover {
@@ -1949,8 +1947,8 @@ p {
 	}
 	.popup-container button {
 		width: 290px;
-		padding-left: 0px;
-		padding-right: 0px;
+		padding-left: 16px;
+		padding-right: 16px;
 	}
 	.popup_little_text {
 		margin-bottom: 20px;
@@ -1958,6 +1956,11 @@ p {
 	}
 	#close {
 		top: 2%;
+		display: inline-block;
+		text-align: left;
+		line-height: 0;
+		border-radius: 0;
+		-webkit-appearance: none;
 	}
 	.popupSuccessDocs .popup_little_text {
 	margin-top: 20px;
