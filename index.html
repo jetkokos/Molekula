@@ -349,17 +349,61 @@
 			<div class="overlay"></div>
 			<div class="popup-container">
 				<button href="#" id="close">&times;</button>
-				<h6>Вход</h6>
+				<h6>Вход <br> в личный кабинет</h6>
 				<form class="form formEnter">
 					<input type="e-mail" name="e_mail" placeholder="E-mail">
 					<span class="form_warning"></span>
 					<input type="password" name="password" placeholder="ПАРОЛЬ">
 					<span class="form_warning"></span>
-					<button name="submit" class="button button-gradient">Войти в систему</button>
-					<p class="popup_little_text"></p>	
+					<button name="submit" class="button button-gradient">Войти</button>
+					<p>Еще не зарегистрированы?</p>
+					<button name="submit" class="button button-gradient">Зарегистрироваться в молекуле</button>
 				</form>	
 			</div>
 		</div>
+		<div class="popup regPop">
+			<div class="overlay"></div>
+			<div class="popup-container">
+				<button href="#" id="close">&times;</button>
+				<h6>Зарегистрироваться <br> в молекуле</h6>
+				<form class="form formEnter">
+					<label for="name">Ваше имя</label>
+					<input type="text" name="name" placeholder="Имя">
+					<label for="e_mail">Адрес вашей электронной почты</label>
+					<input type="e-mail" name="e_mail" placeholder="E-mail">
+					<label for="password">Придумайте пароль</label>
+					<input type="password" name="password" placeholder="*******">
+					<label for="password_repeat">Повторите пароль</label>
+					<input type="password" name="password_repeat" placeholder="*******">
+					<span class="form_warning"></span>
+					<button name="submit" class="button button-gradient">Зарегистрироваться в молекуле</button>
+				</form>	
+			</div>
+		</div>
+		<div class="popup popupSuccessEnter">
+			<div class="overlay"></div>
+			<div class="popup-container">
+				<button href="#" id="close">&times;</button>
+				<h6>Добро пожаловать<br> в молекулу</h6>
+				<form class="form formEnter">
+					<button name="submit" class="button button-gradient">Перейти в личный кабинет</button>
+					<button name="submit" class="button button-gradient">Остаться на сайте</button>
+				</form>	
+			</div>
+		</div>
+		<div class="popup popupRememberPass">
+			<div class="overlay"></div>
+			<div class="popup-container">
+				<button href="#" id="close">&times;</button>
+				<h6>Вспомнить пароль</h6>
+				<form class="form formRememberPass">
+					<label for="e_mail">Адрес вашей электронной почты</label>
+					<input type="e-mail" name="e_mail" placeholder="E-mail">
+					<button name="submit" class="button button-gradient">Отправить</button>
+				</form>	
+			</div>
+		</div>
+
 		<div class="popup popupSuccessCall">
 			<div class="overlay"></div>
 			<div class="popup-container">
@@ -373,7 +417,8 @@
 				<button href="#" id="close">&times;</button>
 				<p class="popup_little_text">Ваша заявка успешно отправлена.<br>Мы отправим документы на указанный<br>Вами электронный адрес в течении 1 часа.</p>
 			</div>	
-		</div>	
+		</div>
+
 	</div>
 
 	<script src="js/jquery-3.3.1.js"></script>
