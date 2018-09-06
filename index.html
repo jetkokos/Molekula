@@ -21,6 +21,14 @@
 					<a href="#" class="nav-itm callBack_ref">Обратная связь</a>
 					<div class="nav-add">
 						<a href="#" class="enter enterPop_ref">Вход</a>
+						<a href="#" class="enter enterPrivateZone_ref">ЛК</a>
+						<ul class="dropdown">
+							<li><a href="#">Иван Иванов <br> <span class="dropdown_mail">mail@mail.ru</span></a></li>
+							<li><a href="#">Личный кабинет</a></li>
+							<li><a href="#">Настройки</a></li>
+							<li><a href="#">Справка</a></li>
+							<li><a href="#"> <span></span> Выход</a></li>
+						</ul>
 						<a href="#" class="tube callBack_ref"></a>
 					</div>
 				</nav>
@@ -241,7 +249,7 @@
 				<div class="col phone">
 					<a href="tel:+253751412456" class="">+ 25 (375) 141-24-56</a>
 					<p>Горячая линия: 24/7</p>
-					<a href="#" class="button button_blue callBack_ref">Связаться с нами</a>
+					<a href="#" class="button callBack_ref">Связаться с нами</a>
 				</div>
 				<a href="#navfirst" class="go_top"></a>		
 			</div>
@@ -354,11 +362,14 @@
 					<input type="e-mail" name="e_mail" placeholder="E-mail">
 					<span class="form_warning"></span>
 					<input type="password" name="password" placeholder="ПАРОЛЬ">
-					<span class="form_warning"></span>
-					<button name="submit" class="button button-gradient">Войти</button>
-					<p>Еще не зарегистрированы?</p>
-					<button name="submit" class="button button-gradient">Зарегистрироваться в молекуле</button>
-				</form>	
+					<div class="popup-container_enter">
+						<a class="rememberPass_ref" href="#">Забыли пароль?</a>
+						<span class="form_warning"></span>
+						<button name="submit" class="successReg_ref button button_enter">Войти</button>
+					</div>
+				</form>
+				<p class="popup_registration_text-big">Еще не зарегистрированы?</p>
+				<button class="enterReg_ref button button_blue">Зарегистрироваться</button>	
 			</div>
 		</div>
 		<div class="popup regPop">
@@ -367,16 +378,16 @@
 				<button href="#" id="close">&times;</button>
 				<h6>Зарегистрироваться <br> в молекуле</h6>
 				<form class="form formEnter">
-					<label for="name">Ваше имя</label>
+					<label for="name" class="popup_registration_text">Ваше имя</label>
 					<input type="text" name="name" placeholder="Имя">
-					<label for="e_mail">Адрес вашей электронной почты</label>
+					<label for="e_mail" class="popup_registration_text">Адрес вашей электронной почты</label>
 					<input type="e-mail" name="e_mail" placeholder="E-mail">
-					<label for="password">Придумайте пароль</label>
+					<label for="password" class="popup_registration_text">Придумайте пароль</label>
 					<input type="password" name="password" placeholder="*******">
-					<label for="password_repeat">Повторите пароль</label>
+					<label for="password_repeat" class="popup_registration_text">Повторите пароль</label>
 					<input type="password" name="password_repeat" placeholder="*******">
 					<span class="form_warning"></span>
-					<button name="submit" class="button button-gradient">Зарегистрироваться в молекуле</button>
+					<button name="submit" class="successReg_ref button button-gradient">Зарегистрироваться</button>
 				</form>	
 			</div>
 		</div>
@@ -384,10 +395,10 @@
 			<div class="overlay"></div>
 			<div class="popup-container">
 				<button href="#" id="close">&times;</button>
-				<h6>Добро пожаловать<br> в молекулу</h6>
+				<h6 class="little_h6">Добро пожаловать<br> в молекулу</h6>
 				<form class="form formEnter">
-					<button name="submit" class="button button-gradient">Перейти в личный кабинет</button>
-					<button name="submit" class="button button-gradient">Остаться на сайте</button>
+					<button name="submit" class="button">Перейти в личный кабинет</button>
+					<button class="home_ref button button_blue">Остаться на сайте</button>
 				</form>	
 			</div>
 		</div>
@@ -397,7 +408,7 @@
 				<button href="#" id="close">&times;</button>
 				<h6>Вспомнить пароль</h6>
 				<form class="form formRememberPass">
-					<label for="e_mail">Адрес вашей электронной почты</label>
+					<label class="popup_registration_text-big" for="e_mail">Адрес вашей электронной почты</label>
 					<input type="e-mail" name="e_mail" placeholder="E-mail">
 					<button name="submit" class="button button-gradient">Отправить</button>
 				</form>	
@@ -426,7 +437,4 @@
 	<script src="js/wow.js"></script>
 	<script src="js/jquery.spincrement.js"></script>
 	<script src="js/script.js"></script>
-	<script>
-		document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></' + 'script>')
-	</script>	
 </html>

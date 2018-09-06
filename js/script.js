@@ -36,10 +36,37 @@ $(document).ready(function(){
       $('body').addClass('popup-open');
     });
 
-    $(document).on("click", ".enterPop_ref", function(event) {
+     $(document).on("click", ".enterPop_ref", function(event) {
       event.preventDefault();
       $('.enterPop').addClass('visible');
       $('body').addClass('popup-open');
+    }); 
+
+    $(document).on("click", ".enterReg_ref", function(event) {
+      event.preventDefault();
+      $('.enterPop').removeClass('visible');
+      $('.regPop').addClass('visible');
+      $('body').addClass('popup-open');
+    });
+
+    $(document).on("click", ".rememberPass_ref", function(event) {
+      event.preventDefault();
+      $('.enterPop').removeClass('visible');
+      $('.popupRememberPass').addClass('visible');
+      $('body').addClass('popup-open');
+    });
+
+    $(document).on("click", ".successReg_ref", function(event) {
+      event.preventDefault();
+      $('.enterPop').removeClass('visible');
+      $('.popupSuccessEnter').addClass('visible');
+      $('body').addClass('popup-open');
+    });
+
+    $(document).on("click", ".home_ref", function(event) {
+      event.preventDefault();
+      $('.visible').removeClass('visible');
+      $('body').removeClass('popup-open');
     });
 
     $(document).on("click", "#close", function(event) {

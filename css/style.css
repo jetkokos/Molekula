@@ -154,9 +154,73 @@ h6 {
 	display: flex;
 	position: relative;
 }
-
+.dropdown {
+	padding: 0;
+	display: none;
+	list-style: none;
+	border-radius: 4px;
+	overflow: visible;
+}
+.dropdown:before {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-bottom: 12px solid #ffffff;
+	position: absolute;
+	right: 20px;
+	top: -6.5%;
+}
+.dropdown li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(15,39,117);
+	padding: 10px 140px 10px 15px;
+    background: #ffffff;
+	white-space: nowrap;
+	font-size: 15px;
+	line-height: 32px;
+}
+.dropdown li a:hover {
+	background: #ffffff;
+}
+.enterPrivateZone_ref:active ~ .dropdown,
+.enterPrivateZone_ref:focus ~ .dropdown,
+.dropdown:hover {
+	display: block;
+	position: absolute;
+	top: 30px;
+	right: 25%;
+	z-index: 5;
+}
+.dropdown li:first-child a {
+	line-height: 26px;
+font-weight: bold;
+}
+.dropdown li:last-child a:before{
+	content: '';
+	display: block;
+	width: 200%;
+	height: 15px;
+	border-top: 5px dashed #1ed4be;
+}
+.dropdown li:last-child a>span{
+	background: url('../img/exit.png') no-repeat transparent;
+	display: inline-block;
+	width: 15px;
+	height: 17px;
+	margin-bottom: -3px;
+	padding-right: 5px;
+}
+.dropdown_mail {
+	color: #1ed4be;
+	font-weight: normal;
+	font-size: 15px;
+}
 .enter {
 	margin: 0 40px;
+	padding: 8px;
 	font-size: 15px;
 	line-height: 15px;
 	z-index: 0;
@@ -264,7 +328,7 @@ p {
 }
 
 .button_blue {
-	background-image: linear-gradient(90deg, #0f2775 0%, #0051b5 100%);
+	background-image: linear-gradient(90deg, #0f2775 0%, #0051b5 100%) !important;
 }
 .button_blue:hover{
 	background-image: none;
@@ -976,6 +1040,15 @@ p {
 .enterPop {
 	visibility: hidden;
 }
+.regPop {
+	visibility: hidden;
+}
+.popupSuccessEnter {
+	visibility: hidden;
+}
+.popupRememberPass {
+	visibility: hidden;
+}
 .downloadOffer {
 	visibility: hidden;
 }
@@ -991,6 +1064,7 @@ p {
 .popupSuccessDocs {
 	visibility: hidden;
 }
+
 
 .popup {
 	position: fixed;
@@ -1036,7 +1110,7 @@ p {
 	margin-top: 60px;
 	margin-bottom: 35px;
 	margin-left: 60px;
-	width: 300px;
+	width: 310px;
 	font-size: 27px;
 	letter-spacing: 1px;
 	line-height: 35px;
@@ -1097,6 +1171,48 @@ p {
 	cursor: pointer;
 	text-align: center;
 	transition-duration: 0s;
+}
+
+.popup-container .button_blue {
+	margin-bottom: 50px;
+	margin-top: 15px;
+	background-image: linear-gradient(90deg, #0f2775 0%, #0051b5 100%);
+}
+.popup-container .button_blue:hover {
+	transform: scale(1.05);
+	transition-duration: 0.5s;
+}
+.popup-container_enter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.popup-container_enter a {
+	color: rgb(0,178,188);
+}
+.popup-container .popup_registration_text {
+	text-align: left;
+	padding-left: 0;
+	font-size: 17px;
+	letter-spacing: 1px;
+	line-height: 35px;
+	font-weight: 800;
+	align-self: flex-start;
+}
+.popup-container .popup_registration_text-big {
+	font-size: 20px;
+	letter-spacing: 1px;
+	line-height: 35px;
+	font-weight: 800;
+	padding-left: 0;
+}
+.popup-container .button_enter {
+	width: 150px;
+	margin-left: 70px;
+}
+.popup-container .button_enter:hover {
+	transform: scale(1.05);
+	transition-duration: 0.5s;
 }
 
 #close {
@@ -1955,7 +2071,9 @@ p {
 		width: 300px;
 	}
 	.popup-container h6 {
+		font-size: 26.5px;
 		margin-left: 15px;
+		width: 300px;
 	}
 	.popup-container input {
 		width: 280px;
@@ -1986,7 +2104,24 @@ p {
 	margin-top: 20px;
 	}
 
+	.popup-container .button_enter {
+		width: 150px;
+		margin-left: -10px;
+	}
 
+	.popup-container .little_h6 {
+		font-size: 24px; 
+	}
+	.popup-container .popup_registration_text {
+		padding-left: 5px;
+		font-size: 16px;
+	}
+	.dropdown li a {
+		padding: 10px 100px 10px 15px;
+	}
+	.dropdown li:last-child a:before{
+		width: 170%;
+	}
 }
 	
 	
