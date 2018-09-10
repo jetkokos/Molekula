@@ -1713,7 +1713,7 @@ p {
 		border-bottom: 5px solid #1ed4be;
 	}
 	.desc-pic {
-		margin-right: 0;
+		margin-right: 25px;
 	}
 	.desc-pic img {
 		width: 290px;
@@ -2071,7 +2071,7 @@ p {
 		width: 300px;
 	}
 	.popup-container h6 {
-		font-size: 26.5px;
+		font-size: 22px;
 		margin-left: 15px;
 		width: 300px;
 	}
@@ -2088,9 +2088,10 @@ p {
 		margin-bottom: 20px;
 		width: 270px;
 	}
+	
 	#close {
 		top: 10px;
-		right: 10px;
+		right: 0px;
 		display: inline-block;
 		text-align: left;
 		line-height: 0;
@@ -2121,6 +2122,9 @@ p {
 	}
 	.dropdown li:last-child a:before{
 		width: 170%;
+	}
+	.desc-text a {
+		margin-left: 15px;
 	}
 }
 	
