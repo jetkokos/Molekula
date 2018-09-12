@@ -1075,7 +1075,7 @@ p {
 	z-index: 50;
 	opacity: 0;
 	transition: opacity 1s ease 0s;
-	overflow: scroll;
+	overflow-y: scroll;
 }
 
 .overlay {
