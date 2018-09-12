@@ -69,10 +69,26 @@ $(document).ready(function(){
       $('body').removeClass('popup-open');
     });
 
+    //Закрытие попапов
     $(document).on("click", "#close", function(event) {
       $('.visible').removeClass('visible');
       $('body').removeClass('popup-open');
     });
+      //Закрытие попапов
+      $(document).on("click", ".overlay", function(event) {
+        $('.visible').removeClass('visible');
+        $('body').removeClass('popup-open');
+      });
+
+    $(document).keyup(function(e) {
+      if (e.keyCode === 27) {
+        $('.visible').removeClass('visible');
+        $('body').removeClass('popup-open');
+        return false;
+      }
+    });
+
+
 
 
 /*Плавный переход к якорям*/
