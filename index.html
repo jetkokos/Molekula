@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -13,7 +13,7 @@
 	<div class="main-container">
 		<div id="navfirst" class="first-screen wow zoomOut">
 			<div class="header">
-				<a href="#" class="logo"><img src="img/logo.png"></a>
+				<a href="#" class="logo"><img src="img/logo.png" alt="logo"></a>
 				<nav class="nav">
 					<a href="#navdesc" class="nav-itm">О молекуле</a> 
 					<a href="#navreviews" class="nav-itm">Отзывы</a>
@@ -202,11 +202,11 @@
 				</div>
 				<div class="quantity">
 					<div class="quant-block">
-						<p><span class="ball ball_green"></span> <span class="wow odometer">854</span> &nbspатома</p>
+						<p><span class="ball ball_green"></span> <span class="wow odometer">854</span> &nbsp;атома</p>
 						<p>*атом - юридическое лицо, заключившее договор с Молекулой</p>
 					</div>
 					<div class="quant-block">
-						<p><span class="ball ball_blue"></span> <span class="wow odometer">1234</span> &nbspлота</p>
+						<p><span class="ball ball_blue"></span> <span class="wow odometer">1234</span> &nbsp;лота</p>
 						<p>выставлено <br>на активные торги</p>
 					</div>
 				</div>
@@ -230,7 +230,7 @@
 		<div id="navfooter" class="footer">
 			<div class="footer-wrapper">
 				<div class="col adress">
-					<a href="#" class="logo"><img src="img/logo.png"></a>
+					<a href="#" class="logo"><img src="img/logo.png" alt="logo"></a>
 					<p>г. Москва, метро Бауманская, <br> ул. Бауманская, дом 11, строение 8, офис 4 </p>
 					<p>molecula© 2018</p>
 				</div>
@@ -258,7 +258,7 @@
 		<div class="popup callBack">
 			<div class="overlay"></div>
 			<div class="popup-container">
-				<button href="#" id="close">&times;</button>
+				<button id="close">&times;</button>
 				<h6>Заказать обратный звонок</h6>
 				<form class="form formCall">
 					<input type="text" name="name" placeholder="Ваше имя">
@@ -270,15 +270,35 @@
 				<p class="popup_little_text">Менеджер свяжется с вами в ближайшее время</p>	
 			</div>
 		</div>
+		<div class="popup feedback">
+			<div class="overlay"></div>
+			<div class="popup-container">
+				<button id="close">&times;</button>
+				<h6>Обратная связь</h6>
+				<form class="form formCall">
+					<input type="text" name="name" placeholder="Ваше имя">
+					<span class="form_warning"></span>
+					<input type="email" name="e_mail" placeholder="e-mail">
+					<span class="form_warning"></span>
+					<input type="tel" name="tel" placeholder="+7 (___) ___-__-__">
+					<span class="form_warning"></span>
+					
+					<input class="comment" name="comment" type="text" placeholder="Комментарий">
+					<span class="form_warning"></span>
+					<button name="submit" class="button button-gradient">Отправить запрос</button>
+				</form>	
+				<p class="popup_little_text"> Менеджер свяжется с вами в ближайшее время</p>	
+			</div>
+		</div>
 		<div class="popup takeCredit">
 			<div class="overlay"></div>
 			<div class="popup-container">
-				<button href="#" id="close">&times;</button>
+				<button id="close">&times;</button>
 				<h6>Взять товарный кредит</h6>
 				<form class="form formCall">
 					<input type="text" name="name" placeholder="Ваше имя">
 					<span class="form_warning"></span>
-					<input type="e-mail" name="e_mail" placeholder="e-mail">
+					<input type="email" name="e_mail" placeholder="e-mail">
 					<span class="form_warning"></span>
 					<input type="tel" name="tel" placeholder="+7 (___) ___-__-__">
 					<span class="form_warning"></span>
@@ -296,12 +316,12 @@
 		<div class="popup downloadCond">
 			<div class="overlay"></div>
 			<div class="popup-container">
-				<button href="#" id="close">&times;</button>
+				<button  id="close">&times;</button>
 				<h6>Скачать условия работы</h6>
 				<form class="form formDocs">
 					<input type="text" name="name" placeholder="Ваше имя">
 					<span class="form_warning"></span>
-					<input type="e-mail" name="e_mail" placeholder="e-mail">
+					<input type="email" name="e_mail" placeholder="e-mail">
 					<span class="form_warning"></span>
 					<button  class="button button-gradient">Получить условия работы</button>
 				</form>	
@@ -311,12 +331,12 @@
 		<div class="popup downloadOffer">
 			<div class="overlay"></div>
 			<div class="popup-container">
-				<button href="#" id="close">&times;</button>
+				<button  id="close">&times;</button>
 				<h6>Скачать коммерческое предложение</h6>
 				<form class="form formDocs">
 					<input type="text" name="name" placeholder="Ваше имя">
 					<span class="form_warning"></span>
-					<input type="e-mail" name="e_mail" placeholder="e-mail">
+					<input type="email" name="e_mail" placeholder="e-mail">
 					<span class="form_warning"></span>
 					<button name="submit" class="button button-gradient">Получить документ</button>
 				</form>	
@@ -326,12 +346,12 @@
 		<div class="popup downloadContract">
 			<div class="overlay"></div>
 			<div class="popup-container">
-				<button href="#" id="close">&times;</button>
+				<button  id="close">&times;</button>
 				<h6>Скачать договор оферты</h6>
 				<form class="form formDocs">
 					<input type="text" name="name" placeholder="Ваше имя">
 					<span class="form_warning"></span>
-					<input type="e-mail" name="e_mail" placeholder="e-mail">
+					<input type="email" name="e_mail" placeholder="e-mail">
 					<span class="form_warning"></span>
 					<button name="submit" class="button button-gradient">Получить договор оферты</button>
 				</form>	
@@ -341,12 +361,12 @@
 		<div class="popup downloadPolitics">
 			<div class="overlay"></div>
 			<div class="popup-container">
-				<button href="#" id="close">&times;</button>
+				<button  id="close">&times;</button>
 				<h6>Скачать политику конфиденциальности</h6>
 				<form class="form formDocs">
 					<input type="text" name="name" placeholder="Ваше имя">
 					<span class="form_warning"></span>
-					<input type="e-mail" name="e_mail" placeholder="e-mail">
+					<input type="email" name="e_mail" placeholder="e-mail">
 					<span class="form_warning"></span>
 					<button name="submit" class="button button-gradient" >Получить документ</button>
 				</form>	
@@ -356,10 +376,10 @@
 		<div class="popup enterPop">
 			<div class="overlay"></div>
 			<div class="popup-container">
-				<button href="#" id="close">&times;</button>
+				<button  id="close">&times;</button>
 				<h6>Вход <br> в личный кабинет</h6>
 				<form class="form formEnter">
-					<input type="e-mail" name="e_mail" placeholder="E-mail">
+					<input type="email" name="e_mail" placeholder="E-mail">
 					<span class="form_warning"></span>
 					<input type="password" name="password" placeholder="ПАРОЛЬ">
 					<div class="popup-container_enter">
@@ -375,13 +395,13 @@
 		<div class="popup regPop">
 			<div class="overlay"></div>
 			<div class="popup-container">
-				<button href="#" id="close">&times;</button>
+				<button  id="close">&times;</button>
 				<h6>Зарегистрироваться <br> в молекуле</h6>
 				<form class="form formEnter">
 					<label for="name" class="popup_registration_text">Ваше имя</label>
 					<input type="text" name="name" placeholder="Имя">
 					<label for="e_mail" class="popup_registration_text">Адрес вашей электронной почты</label>
-					<input type="e-mail" name="e_mail" placeholder="E-mail">
+					<input type="email" name="e_mail" placeholder="E-mail">
 					<label for="password" class="popup_registration_text">Придумайте пароль</label>
 					<input type="password" name="password" placeholder="*******">
 					<label for="password_repeat" class="popup_registration_text">Повторите пароль</label>
@@ -394,7 +414,7 @@
 		<div class="popup popupSuccessEnter">
 			<div class="overlay"></div>
 			<div class="popup-container">
-				<button href="#" id="close">&times;</button>
+				<button  id="close">&times;</button>
 				<h6 class="little_h6">Добро пожаловать<br> в молекулу</h6>
 				<form class="form formEnter">
 					<button name="submit" class="button">Перейти в личный кабинет</button>
@@ -405,11 +425,11 @@
 		<div class="popup popupRememberPass">
 			<div class="overlay"></div>
 			<div class="popup-container">
-				<button href="#" id="close">&times;</button>
+				<button  id="close">&times;</button>
 				<h6>Вспомнить пароль</h6>
 				<form class="form formRememberPass">
 					<label class="popup_registration_text-big" for="e_mail">Адрес вашей электронной почты</label>
-					<input type="e-mail" name="e_mail" placeholder="E-mail">
+					<input type="email" name="e_mail" placeholder="E-mail">
 					<button name="submit" class="button button-gradient">Отправить</button>
 				</form>	
 			</div>
@@ -418,14 +438,14 @@
 		<div class="popup popupSuccessCall">
 			<div class="overlay"></div>
 			<div class="popup-container">
-				<button href="#" id="close">&times;</button>
+				<button  id="close">&times;</button>
 				<p class="popup_little_text">Ваша заявка успешно отправлена.<br>Дождитесь звонка оператора.</p>	
 			</div>
 		</div>	
 		<div class="popup popupSuccessDocs">
 			<div class="overlay"></div>
 			<div class="popup-container">
-				<button href="#" id="close">&times;</button>
+				<button  id="close">&times;</button>
 				<p class="popup_little_text">Ваша заявка успешно отправлена.<br>Мы отправим документы на указанный<br>Вами электронный адрес в течении 1 часа.</p>
 			</div>	
 		</div>
