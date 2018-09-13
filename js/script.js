@@ -70,7 +70,7 @@ $(document).ready(function(){
     });
 
     //Закрытие попапов
-    $(document).on("click", "#close", function(event) {
+    $(document).on("click", ".close", function(event) {
       $('.visible').removeClass('visible');
       $('body').removeClass('popup-open');
     });

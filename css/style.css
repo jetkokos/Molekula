@@ -1215,7 +1215,7 @@ p {
 	transition-duration: 0.5s;
 }
 
-#close {
+.close {
 	margin: 0;
 	padding: 0;
 	position: absolute;
@@ -1232,7 +1232,7 @@ p {
 	z-index: 10;
 }
 
-#close:hover {
+.close:hover {
 	cursor: pointer;
 	color: #1dd3bd;
 	border-radius: 0;
@@ -2089,7 +2089,7 @@ p {
 		width: 270px;
 	}
 	
-	#close {
+	.close {
 		top: 10px;
 		right: 0px;
 		display: inline-block;
