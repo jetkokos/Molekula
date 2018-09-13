@@ -5,6 +5,11 @@ $(document).ready(function(){
       $('.callBack').addClass('visible');
       $('body').addClass('popup-open');
     });
+    $(document).on("click", '.feedback_ref', function(event) {
+      event.preventDefault();
+      $('.feedback').addClass('visible');
+      $('body').addClass('popup-open');
+    });
 
     $(document).on("click", '.takeCredit_ref', function(event) {
       event.preventDefault();
@@ -74,7 +79,7 @@ $(document).ready(function(){
       $('.visible').removeClass('visible');
       $('body').removeClass('popup-open');
     });
-      //Закрытие попапов
+      
       $(document).on("click", ".overlay", function(event) {
         $('.visible').removeClass('visible');
         $('body').removeClass('popup-open');
